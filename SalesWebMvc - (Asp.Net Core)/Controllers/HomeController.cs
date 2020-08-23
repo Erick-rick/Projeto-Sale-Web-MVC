@@ -18,6 +18,7 @@ namespace SalesWebMvc____Asp.Net_Core_.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
+            ViewData["Email"] = "erick.h@gmail.com";
 
             return View();
         }
