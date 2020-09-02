@@ -11,13 +11,22 @@ namespace SalesWebMvc.Services
     {
         private readonly SalesWebMvcContext _context; //readonly não permitir alteração
 
-        public SellerService(SalesWebMvcContext context) {
+        public SellerService(SalesWebMvcContext context)
+        {
             _context = context;
         }
 
         //forma sincrona
-        public List<Seller> FindAll() {
+        public List<Seller> FindAll()
+        {
             return _context.Seller.ToList(); //converte a tabela vendedor em lista e mostrar todos
 
+        }
+
+        public void Insert(Seller obj) {
+
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
