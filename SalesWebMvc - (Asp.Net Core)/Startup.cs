@@ -42,6 +42,7 @@ namespace SalesWebMvc____Asp.Net_Core_
 
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
 
         }
 
